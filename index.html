@@ -3,28 +3,58 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Memory Game</title>
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
     />
-  
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="wrapper">
-      <div class="stats-container">
-        <div id="moves-count"></div>
-        <div id="time"></div>
+      <div class="app-container">
+        <div class="game-container-wrapper">
+          <div class="game-container"></div>
+        </div>
+
+        <div class="side-panel">
+          <h2 class="panel-title">Game Stats</h2>
+          <div class="stats-container">
+            <div id="time"><span>Time:</span> 00:00</div>
+            <div id="moves-count"><span>Moves:</span> 0</div>
+          </div>
+
+          <h2 class="panel-title">High Scores</h2>
+          <div class="high-scores-container">
+            <div>
+              <i class="fas fa-trophy"></i> Best Moves:
+              <span id="best-moves">--</span>
+            </div>
+            <div>
+              <i class="fas fa-clock"></i> Best Time:
+              <span id="best-time">--:--</span>
+            </div>
+          </div>
+
+          <div id="result"></div>
+
+          <div class="controls-container">
+            <button id="start">Start Game</button>
+            <button id="stop" class="hide">Stop Game</button>
+            <button id="reset" class="hide">Reset Game</button>
+          </div>
+
+          <div class="theme-container">
+            <button id="toggle-theme" title="Toggle Dark/Light Mode">
+              <i class="fas fa-moon"></i>
+            </button>
+          </div>
+        </div>
       </div>
-      <div class="game-container"></div>
-      <button id="stop" class="hide">Stop Game</button>
     </div>
-    <div class="controls-container">
-      <p id="result"></p>
-      <button id="start">Start Game</button>
-    </div>
-    
     <script src="script.js"></script>
   </body>
 </html>
