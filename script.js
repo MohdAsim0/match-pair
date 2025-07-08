@@ -232,4 +232,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const savedTheme = localStorage.getItem("theme") || "light";
   applyTheme(savedTheme);
   updateDisplays();
+
+  // Generate board without activating the game
+  let cardValues = generateRandom();
+  matrixGenerator(cardValues);
 });
